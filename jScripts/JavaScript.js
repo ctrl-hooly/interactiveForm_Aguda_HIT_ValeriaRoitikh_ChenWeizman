@@ -24,19 +24,19 @@ function checkForm() {
 
     if (userName.length > 0 && chosenLevel > 0) {
         document.getElementById("sendBtn").disabled = false;
-        document.getElementById("btnHint").innerHTML = "";
+       
     }
     else {
         document.getElementById("sendBtn").disabled = true;
-        document.getElementById("btnHint").innerHTML = "הכפתור ייפתח אחרי מילוי שם ובחירת רמה";
+        
     }
 
     // השם מופיע בכותרת של הסיכום
     if (userName.length > 0) {
-        document.getElementById("summaryTitle").innerHTML = "החיפוש של: " + userName;
+        document.getElementById("summaryTitle").innerHTML = "החיפוש שלי: " + userName;
     }
     else {
-        document.getElementById("summaryTitle").innerHTML = "החיפוש שלי";
+        document.getElementById("summaryTitle").innerHTML = "החיפוש שלי:";
     }
 }
 
@@ -102,7 +102,7 @@ function updateSummary() {
     const list = buildCategoryList();
 
     if (list == "") {
-        document.getElementById("catSummary").innerHTML = "עוד לא נבחר תחום. בלי בחירה יוצגו כל התחומים.";
+        document.getElementById("catSummary").innerHTML = "עוד לא נבחר תחום. ";
     }
     else {
         document.getElementById("catSummary").innerHTML = list;

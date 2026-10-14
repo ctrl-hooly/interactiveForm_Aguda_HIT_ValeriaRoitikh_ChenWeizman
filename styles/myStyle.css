@@ -423,10 +423,6 @@ legend {
     cursor: not-allowed;
 }
 
-.hint {
-    font-size: 14px;
-    color: #4D5070;
-}
 
 /* ----- הודעת האישור ----- */
 .resultBox {
