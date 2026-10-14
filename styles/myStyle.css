@@ -1,0 +1,506 @@
+/* ===== צבעי האתר =====
+   כחול כהה: #251F50
+   תכלת: #92D1E9
+   כחול: #3E9BC0
+   רקע: #F4F6FB
+   מסגרת: #D6E4EE
+   טקסט משני: #4D5070
+*/
+
+/* הרוחב כולל ריפוד ומסגרת */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 148px; /* ההידר קבוע למעלה, אז התוכן מתחיל מתחתיו */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #251F50;
+    background-color: #F4F6FB;
+}
+
+/* מרכז את התוכן */
+.wrap {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ===== הידר ופירורי לחם - כמו באתר של האגודה ===== */
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #251F50;
+    z-index: 10;
+}
+
+header > .inner {
+    width: 1060px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 20px 40px 0 40px;
+    box-sizing: content-box;
+}
+
+header .logo {
+    float: right;
+}
+
+header .logo img {
+    width: 200px;
+    height: auto;
+}
+
+/* 600 ולא 520 כמו באתר, כי הוספנו פריט */
+header nav {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 12px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 6px;
+}
+
+header nav ul li a {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid #251F50;
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+}
+
+header nav ul li a:hover,
+header nav ul li a.current {
+    border-color: #92D1E9; /* העמוד הנוכחי */
+}
+
+header nav ul li a.notActive:hover {
+    border-color: #251F50;
+}
+
+header .userButtons {
+    float: left;
+    margin-top: 12px;
+}
+
+.userButtons > a {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 2px solid #92D1E9;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.userButtons > .btnLogin {
+    color: #251F50;
+    background-color: #92D1E9;
+}
+
+.userButtons > .btnRegister {
+    margin-right: 8px;
+    color: white;
+}
+
+.breadcrumbs {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+}
+
+.breadcrumbs > .inner {
+    width: 1060px;
+    height: 16px;
+    margin: 0 auto;
+    padding: 16px 40px;
+    box-sizing: content-box;
+}
+
+.breadcrumbs ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs ol li {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.breadcrumbs ol li > span {
+    padding: 0 8px;
+}
+
+.breadcrumbs ol li a {
+    color: #251F50;
+}
+
+/* ===== כותרת ראשית ===== */
+.hero {
+    background-color: #251F50;
+    padding: 24px 0 28px;
+}
+
+.heroInner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.heroText h1 {
+    margin: 0 0 10px;
+    font-size: 38px;
+    color: #FFFFFF;
+}
+
+.heroText p {
+    margin: 0;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.heroImg {
+    width: 420px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== אזור הטופס ===== */
+.mainArea {
+    padding-top: 40px;
+    padding-bottom: 56px;
+}
+
+.formBox {
+    background-color: #FFFFFF;
+    border: 2px solid #D6E4EE;
+    padding: 32px;
+}
+
+.formBox h2 {
+    margin: 0 0 6px;
+    font-size: 28px;
+}
+
+.formNote {
+    margin: 0 0 24px;
+    font-size: 14px;
+    color: #4D5070;
+}
+
+/* כוכבית ומספרי השאלות */
+.req,
+.num {
+    color: #3E9BC0;
+    font-weight: bold;
+}
+
+.optional {
+    font-weight: normal;
+    font-size: 14px;
+    color: #4D5070;
+}
+
+/* כל שאלה ב-fieldset עם legend */
+fieldset {
+    border: 0;
+    margin: 0 0 28px;
+    padding: 0;
+}
+
+legend {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 0 12px;
+}
+
+.fieldLabel {
+    display: block;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+#userName {
+    width: 100%;
+    height: 46px;
+    border: 2px solid #D6E4EE;
+    padding: 0 14px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #251F50;
+}
+
+/* מסגרת כשהשדה בפוקוס */
+#userName:focus {
+    outline: 3px solid #92D1E9;
+}
+
+/* ----- רדיו ותמונת הרמה ----- */
+/* האפשרויות מימין, התמונה משמאל */
+.levelRow {
+    display: flex;
+    gap: 24px;
+}
+
+.levelOptions {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* אפשר ללחוץ על כל השורה */
+.option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 0 14px;
+    border: 2px solid #D6E4EE;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.option input,
+.catText input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #251F50;
+}
+
+.levelImageBox {
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px;
+    background-color: #251F50;
+    color: #FFFFFF;
+}
+
+.levelImageBox img {
+    width: 110px;
+    height: 110px;
+}
+
+/* ההודעה לפני שבוחרים רמה */
+.placeholder {
+    flex: 1;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+    border: 2px dashed #92D1E9;
+    color: #D6EEF8;
+}
+
+.levelName {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ----- צ'קבוקס עם תמונות ----- */
+/* 4 תחומים בשורה */
+.catGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.catTile {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #D6E4EE;
+    background-color: #D6EEF8;
+    cursor: pointer;
+}
+
+.catImg {
+    display: block;
+    width: 246px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    opacity: 0.35; /* בהתחלה חצי שקוף, ה-JS משנה */
+}
+
+.catText {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-top: 2px solid #D6E4EE;
+    background-color: #FFFFFF;
+}
+
+/* ----- פס הסיכום ----- */
+.summaryBar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 28px;
+    margin-bottom: 20px;
+    padding: 16px 20px;
+    background-color: #251F50;
+    color: #FFFFFF;
+}
+
+.summaryBar p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.summaryBar .summaryName {
+    font-size: 18px;
+    font-weight: bold;
+    color: #92D1E9;
+}
+
+/* מספר הקורסים - בצד שמאל של הפס */
+.summaryBar .foundBox {
+    margin-right: auto;
+    padding: 8px 12px;
+    background-color: #FFFFFF;
+    color: #251F50;
+    font-weight: bold;
+}
+
+/* ----- כפתור ----- */
+.sendRow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+}
+
+#sendBtn {
+    min-height: 52px;
+    padding: 0 36px;
+    border: 0;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #251F50;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* כפתור מנוטרל - אפור */
+#sendBtn:disabled {
+    background-color: #D6E4EE;
+    color: #4D5070;
+    cursor: not-allowed;
+}
+
+.hint {
+    font-size: 14px;
+    color: #4D5070;
+}
+
+/* ----- הודעת האישור ----- */
+.resultBox {
+    margin-top: 24px;
+    padding: 24px 28px;
+    background-color: #251F50;
+    color: #FFFFFF;
+    border-top: 6px solid #92D1E9;
+}
+
+/* מוסתר כשאין הודעה */
+.resultBox:empty {
+    display: none;
+}
+
+.resultBox h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+    color: #92D1E9;
+}
+
+.resultBox p {
+    margin: 0 0 8px;
+    font-size: 16px;
+}
+
+.resultBox ul {
+    margin: 8px 0 0;
+    padding: 0 20px 0 0;
+}
+
+.resultBox li {
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.resultTitle {
+    font-weight: bold;
+    color: #92D1E9;
+}
+
+/* ===== תחתית ===== */
+.footer {
+    padding: 18px 0;
+    background-color: #251F50;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ===== מסך צר ===== */
+@media (max-width: 900px) {
+    /* 2 תחומים בשורה */
+    .catGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    /* התמונה של הרמה יורדת מתחת לאפשרויות */
+    .levelRow {
+        flex-direction: column;
+    }
+
+    .levelImageBox {
+        width: 100%;
+        min-height: 150px;
+    }
+
+    .catGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .heroText h1 {
+        font-size: 30px;
+    }
+}
