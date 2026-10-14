@@ -5,7 +5,7 @@
 const levelNames = ["רמה 1 - מתחילים", "רמה 2 - ממשיכים", "רמה 3 - מתקדמים"];
 const levelImages = ["images/level-1.png", "images/level-2.png", "images/level-3.png"];
 
-// תחומים (צ'קבוקס). האינדקס זהה למספר ב-id: ...
+// תחומים (צ'קבוקס). האינדקס זהה למספר ב-id: cat0, cat1...
 const categoryNames = ["שפות", "טכנולוגיה", "יצירה", "תנועה"];
 
 // קורסים
@@ -56,7 +56,6 @@ function chooseLevel(level) {
 
 
 // צ'קבוקס: מקבלת את מספר התחום ומשנה את השקיפות של התמונה שלו
-// צ'קבוקס: מקבלת את מספר התחום ומשנה את השקיפות של התמונה שלו
 function toggleCategory(index) {
     if (document.getElementById("cat" + index).checked == true) {
         document.getElementById("catImg" + index).style.opacity = "1";
@@ -96,7 +95,6 @@ function isCourseMatch(courseIndex, list) {
     return match;
 }
 
-// סופרת כמה קורסים מתאימים ומציגה בסיכום
 // מעדכנת את פס הסיכום: התחומים שסומנו וכמה קורסים מתאימים
 function updateSummary() {
     const list = buildCategoryList();
